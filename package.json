@@ -1,0 +1,13 @@
+{
+  "name": "CLI-Time",
+  "version": "1.0.0",
+  "description": "CLI APP I suppose",
+  "main": "nope",
+  "repository": "https://github.com/Rxjas/CLI-Time.git",
+  "author": "rxjas <christopherrojas35@yahoo.com>",
+  "license": "MIT",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquirer": "^8.1.2"
+  }
+}
