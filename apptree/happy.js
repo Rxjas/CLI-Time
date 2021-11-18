@@ -80,4 +80,6 @@ function theJourney(){
             console.log('Hope you find the path you truly need to follow soon')
         } else{ console.loglog(' ERROR ERROR ERROR ERROR ERROR')}
     })
-}
+};
+
+module.exports = happy;
