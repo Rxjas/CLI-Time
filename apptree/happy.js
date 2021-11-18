@@ -1,5 +1,7 @@
 const inquirer = require('inquirer');
+var random = ['No','No','No','Yes', 'No','No','No'];
 
+//starts the good times
 happy();
 
 function happy (){
@@ -25,8 +27,14 @@ inquirer
     .catch((err) => {throw err})
 };
 
+//Function to call glee repeatedly w/o nesting issues
 function trueGlee(){
     glee()
+};
+
+//shuffle lists to make random arrays credits https://javascript.info/task/shuffle
+function shuffle (list){
+    return(list.sort(() => Math.random() - 0.5))
 };
 
 
@@ -35,15 +43,15 @@ function glee () {
         name: 'denial',
         type: 'list',
         message: 'Are you sure?',
-        choices: ['No','No','No','Yes', 'No','No','No']
+        choices: shuffle(random)    
     })
-    .then((ans => {
-        if (ans.denial === 'Yes'){
-            trueGlee();
-        }
-        else {
-            console.log('At least you actually know.')
-        }
+        .then((ans => {
+            if (ans.denial === 'Yes'){
+                trueGlee();
+            }
+            else {
+                console.log('At least you actually know.')
+            }
     }))
     .catch((err) => {throw err})
     }
