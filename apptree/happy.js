@@ -22,6 +22,10 @@ inquirer
         if(ans.happy === 'Yes'){
             trueGlee();
         }
+        else if (ans.happy === 'No'){
+            theJourney();
+        }
+        //this else is for the idk
         else{console.log('good for you')}
     })
     .catch((err) => {throw err})
@@ -55,3 +59,25 @@ function glee () {
     }))
     .catch((err) => {throw err})
     }
+
+function theJourney(){
+    inquirer.prompt([{
+        type: 'list',
+        message: '.... Why?',
+        name: 'stepOne',
+        choices: [
+            'I don"t deserve to be happy',
+            'Not really sure',
+            'Feeling unhappy in all honesty feels great',
+            'It"s only temporary',
+            'No one to make me feel valued',
+            'I don"t see the value in myself',
+            'Too gone'
+        ]
+    }])
+    .then((ans) => {
+        if(ans){
+            console.log('Hope you find the path you truly need to follow soon')
+        } else{ console.loglog(' ERROR ERROR ERROR ERROR ERROR')}
+    })
+}
