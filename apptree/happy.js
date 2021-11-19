@@ -2,7 +2,7 @@ const inquirer = require('inquirer');
 var random = ['No','No','No','Yes', 'No','No','No'];
 
 //starts the good times
-happy();
+// happy();
 
 function happy (){
 inquirer

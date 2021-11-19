@@ -2,7 +2,8 @@
 const happy = require('./happy.js');
 
 const appTreeRoot = {
-    happy: happy
+    happy: happy,
+    test: 'test'
 };
 
 module.exports = appTreeRoot;
